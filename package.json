@@ -1,0 +1,11 @@
+{
+  "name": "swaptitan-sdk",
+  "version": "1.0.0",
+  "description": "Free non-custodial Swap API client — Solana (Jupiter) + 7 EVM chains (KyberSwap) + universal cross-chain router + Solana priority-fee oracle. Returns unsigned transactions for YOUR wallet. No API key.",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/polsolbridge/solana-swap-api" },
+  "homepage": "https://swaptitan.net/developers",
+  "keywords": ["solana", "jupiter", "swap", "dex", "evm", "base", "kyberswap", "defi", "non-custodial", "crypto", "mcp", "ai-agents", "priority-fee", "xmr", "cross-chain"],
+  "engines": { "node": ">=18" }
+}
