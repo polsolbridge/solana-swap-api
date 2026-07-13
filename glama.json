@@ -1,0 +1,5 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["polsolbridge"],
+  "iconUrl": "https://swaptitan.net/logo192.png"
+}
