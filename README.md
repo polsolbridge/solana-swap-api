@@ -6,6 +6,17 @@ Swap on **Solana** and **7 EVM chains** with one free REST API. Every endpoint r
 
 Base URL: `https://swaptitan.net`
 
+
+## Run as MCP server (stdio)
+
+A self-contained MCP server — no dependencies, Node >= 18:
+
+```bash
+node mcp-server.js
+```
+
+18 tools (prices, quotes, Solana + EVM swaps, routing, priority fees, Hyperliquid, rug checks). The protocol layer runs locally; tool calls hit the free public API. Hosted alternative: `https://swaptitan.net/mcp` (streamable HTTP, no auth).
+
 ## Solana swap (Jupiter aggregator)
 
 ```bash
