@@ -1,5 +1,7 @@
 # SwapTitan Swap API — free, non-custodial, no API key
 
+[![solana-swap-api MCP server](https://glama.ai/mcp/servers/polsolbridge/solana-swap-api/badges/score.svg)](https://glama.ai/mcp/servers/polsolbridge/solana-swap-api)
+
 Swap on **Solana** and **7 EVM chains** with one free REST API. Every endpoint returns an **unsigned transaction** — you sign with your own wallet. The server never holds funds, never sees keys. No registration, no API key, no KYC.
 
 Base URL: `https://swaptitan.net`
