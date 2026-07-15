@@ -467,13 +467,13 @@ const TOOLS = [
       "destructiveHint": false,
       "openWorldHint": true
     },
-    "description": "Check wallet balance on any chain. Returns native balance and USD value.",
+    "description": "Look up the native-coin balance of any wallet address on Solana, Ethereum, Base or BNB Smart Chain. Returns the native balance (SOL, ETH or BNB), its current USD value and the queried chain as JSON, e.g. {\"chain\":\"sol\",\"balance\":1.2345,\"usd\":92.51}. Read-only: needs no signature, never moves funds. Useful before building a swap to verify the wallet can cover amount plus network fees.",
     "inputSchema": {
       "type": "object",
       "properties": {
         "address": {
           "type": "string",
-          "description": "Wallet address to check"
+          "description": "Wallet address to check. Base58 for Solana (e.g. 7uZqehZaRiANgaFkSDvB625TPF78EG6HkAuxanE8ZTjZ); 0x-prefixed hex for EVM chains (e.g. 0xA20E1D8B9aD0fb580a4c36483b1A841D2bE91E68)."
         },
         "chain": {
           "type": "string",
@@ -483,7 +483,7 @@ const TOOLS = [
             "base",
             "bsc"
           ],
-          "description": "Chain to check",
+          "description": "Blockchain to query: sol = Solana (default), eth = Ethereum mainnet, base = Base, bsc = BNB Smart Chain.",
           "default": "sol"
         }
       },
