@@ -78,15 +78,19 @@ curl "https://swaptitan.net/v1/sol/priority-fee"
 # -> { "recommended": { "low": ..., "medium": ..., "high": ..., "turbo": ... }, "computeUnitsHint": {...} }
 ```
 
-## MCP server (AI agents)
+## Connect
 
-Point any MCP-capable agent at `https://swaptitan.net/mcp` (JSON-RPC 2.0, `tools/list` + `tools/call`). Tools include `sol_swap`, `evm_swap`, `smart_route`, `sol_priority_fee`, `swap_create`, `swap_status`, `get_prices`, `rug_check` and more.
+Remote endpoint (no auth, free tier): `https://swaptitan.net/mcp` — JSON-RPC 2.0, streamable HTTP, 18 tools.
 
-```json
-{ "mcpServers": { "swaptitan": { "url": "https://swaptitan.net/mcp" } } }
-```
+- **Claude (web & desktop):** Settings → Connectors → *Add custom connector* → paste `https://swaptitan.net/mcp` → Connect.
+- **Claude Desktop / Cursor / VS Code / Cline:** add to your MCP config:
+  ```json
+  { "mcpServers": { "swaptitan": { "url": "https://swaptitan.net/mcp" } } }
+  ```
+- **Local stdio** (no hosted dependency): `node mcp-server.js` (see above).
+- **Any SDK / agent:** call `tools/list` then `tools/call`. Tools: `sol_swap`, `evm_swap`, `smart_route`, `sol_priority_fee`, `swap_create`, `swap_status`, `get_prices`, `rug_check` and more.
 
-Discovery endpoints: [`/llms.txt`](https://swaptitan.net/llms.txt) · [`/.well-known/agent-skills/index.json`](https://swaptitan.net/.well-known/agent-skills/index.json) · [`/.well-known/mcp/server-card.json`](https://swaptitan.net/.well-known/mcp/server-card.json)
+Discovery: [`/llms.txt`](https://swaptitan.net/llms.txt) · [`/.well-known/agent-skills/index.json`](https://swaptitan.net/.well-known/agent-skills/index.json) · [`/.well-known/mcp/server-card.json`](https://swaptitan.net/.well-known/mcp/server-card.json)
 
 ## More
 
